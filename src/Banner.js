@@ -36,7 +36,7 @@ function truncate(str,n){
         </h1>
         <div className='banner_buttons'>
             <button className='banner_button'>Play</button>
-            <button className='banner_button'>My List</button>
+            <button className='banner_button'> My List</button>
         </div>
         <h2 className='banner_description'>
             {truncate(movie?.overview, 150)}</h2>
