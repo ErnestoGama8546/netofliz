@@ -1,27 +1,37 @@
-import React from 'react'
+import React, {useState, useEffect} from "react";
+import "./NavB.css";
 
-function navB() {
+
+
+function NavB() {
+    const [show, handleShow] = useState(false);
+    
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                handleShow(true);
+            } else handleShow(false);
+         });
+         return () => {
+             window.removeEventListener("scroll");
+         };
+    }, []);
+
   return (
-    <div className='NavB'>
-
-        <div className='netofliz_logo'>
+    <div className={`navBar ${show && "nav_black"}`}>
         <img   
             className='netofliz_logo'
-            src='../public/NTO.png'
+            src='./NTO.png'
             alt= 'netofliz logo'
         />
-       </div> 
 
-    <div className='avatar_logo'>
         <img 
-            className='avatar_logo'
-            src='../public/avatar.png'
+            className='avatar_logoNav'
+            src='./avatar.png'
             alt='avatar logo'
-        />
-        </div>    
-
+        /> 
     </div>
   );
 }
 
-export default navB
+export default NavB;
