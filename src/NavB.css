@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
-  height: 30px;
+  padding: 10px;
+  height: 40px;
   z-index: 1;
 
   /*Animation*/
@@ -25,6 +25,6 @@
 .avatar_logoNav {
   position: fixed;
   right: 20px;
-  width: 30px;
+  width: 80px;
   object-fit: contain;
 }

@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./NavB.css";
+import avatar from './avatar.png';
+import logo from './NTO.png';
 
 
 
@@ -21,13 +23,13 @@ function NavB() {
     <div className={`navBar ${show && "nav_black"}`}>
         <img   
             className='netofliz_logo'
-            src='./NTO.png'
+            src={logo}
             alt= 'netofliz logo'
         />
 
         <img 
             className='avatar_logoNav'
-            src='./avatar.png'
+            src={avatar}
             alt='avatar logo'
         /> 
     </div>
